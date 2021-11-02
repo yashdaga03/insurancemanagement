@@ -14,12 +14,11 @@
 
   {% include "insurance/navbar.html" %}
   <br><br>
-
+<!-- 
   <center>
     <h3 class='alert alert-success'>Send Us Your Valuable Feedback !</h3>
 
     <form method="POST" autocomplete="off">
-      <!-- Very Important csrf Token -->
       {% csrf_token %}
       <div class="form-group">
         <p>
@@ -29,7 +28,22 @@
         <input type="submit" value="Send Message" class='btn btn-primary btn-lg'>
       </div>
     </form>
+  </center> -->
+  <center>
+    <h3 class='alert alert-success' style="margin-bottom:0px;">Contact Us!</h3>
   </center>
+  <div class="jumbotron text-center" style="margin-bottom: 0px;margin-top: 0px;">
+    
+    <p class="lead">In order to understand your valueable feedbacks, you can write us on</p>
+    <p class="lead">YASH DAGA - yash@gmail.com</p>
+    <p class="lead">TARUNPREET SINGH SURI - tarunpreet@gmail.com</p>
+    <hr class="my-4">
+    <!-- <p>Explore our Website.</p> -->
+    <p class="lead">
+      <a class="btn btn-primary btn-lg" href="/" role="button">HOME</a>
+    </p>
+    <!-- <br><br><br><br> -->
+  </div>
 
   {% include "insurance/footer.html" %}
 </body>

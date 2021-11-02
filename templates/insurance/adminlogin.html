@@ -121,17 +121,18 @@ transform: translate(0%,0%);
 
 
 <div class="log-form">
-  <h2 class="text-center">LOGIN TO YOUR ACCOUNT</h2><br>
+  <h2 class="text-center" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">Sign IN</h2><br>
   <form method="post">
    {% csrf_token %}
      {% render_field form.username class="form-control" placeholder="Username" %}
      <br>
     {% render_field form.password class="form-control" placeholder="Password" %}
     <br>
-    <button type="submit" class="btn primary text-center">Login</button>
+    <button type="submit" class="btn btn-primary btn-medium">Login</button>
     
   </form>
-</div><!--end log form -->
+</div>
+<!--end log form -->
 
 
 <br><br><br><br><br><br><br><br><br>

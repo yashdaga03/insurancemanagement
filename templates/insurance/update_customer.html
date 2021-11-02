@@ -51,30 +51,31 @@
 </head>
 
 <br><br>
-<h3 style="text-align:center;">UPDATE CUSTOMER</h3>
+<body style="background-color:rgb(0, 0, 0);">
+<h3 style="text-align:center; color: white;">UPDATE CUSTOMER</h3>
 <div>
   <form method="post" autocomplete="off" enctype="multipart/form-data" style="margin-left:200px;margin-right:200px;">
       {% csrf_token %}
-        <label for="first_name">First Name</label>
+        <label style="color: white;" for="first_name">First Name</label>
         {% render_field userForm.first_name class="form-control" placeholder="First Name" %}
-        <label for="last_name">Last Name</label>
+        <label style="color: white;" for="last_name">Last Name</label>
         {% render_field userForm.last_name class="form-control" placeholder="Last Name" %}
-          <label for="mobile">Mobile</label>
+          <label style="color: white;" for="mobile">Mobile</label>
           {% render_field customerForm.mobile class="form-control" placeholder="Mobile" %}
-            <label for="address">Address</label>
+            <label style="color: white;" for="address">Address</label>
           {% render_field customerForm.address class="form-control" placeholder="Address" %}
           
-        <label for="username">Username</label>
+        <label style="color: white;" for="username">Username</label>
         {% render_field userForm.username class="form-control" placeholder="Username" %}
-          <label for="password">Password</label>
+          <label style="color: white;" for="password">Password</label>
         {% render_field userForm.password class="form-control" placeholder="Password" %} <br><br>
-        <label for="profile_pic">Profile Picture</label>
+        <label style="color: white;" for="profile_pic">Profile Picture</label>
           {% render_field customerForm.profile_pic class="form-control" placeholder="Profile Picture" %}
 <br><br>
     <input type="submit" value="Update">
   </form>
 </div>
-
+</body>
 
 
 <br><br><br><br><br><br><br><br>

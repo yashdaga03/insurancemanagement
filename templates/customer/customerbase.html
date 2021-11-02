@@ -19,7 +19,7 @@
 
     header {
       position: fixed;
-      background: #22242A;
+      background: #111111;
       padding: 20px;
       width: 100%;
       z-index: 1;
@@ -53,11 +53,11 @@
     }
 
     .logout_btn:hover {
-      background: #0B87A6;
+      background: #cbcecf;
     }
 
     .sidebar {
-      background: #2f323a;
+      background: #080808;
       margin-top: 70px;
       padding-top: 30px;
       position: fixed;
@@ -161,10 +161,10 @@
   <!--header area start-->
   <header style="padding-top: 0px;">
     <label for="check">
-      <i style="padding-left: 60px;margin-top: 17px;" class="fas fa-bars" id="sidebar_btn"></i>
+      <!-- <i style="padding-left: 60px;margin-top: 17px;" class="fas fa-bars" id="sidebar_btn"></i> -->
     </label>
     <div class="left_area">
-      <h3>Insurance Management</h3>
+      <h3>Insurance Point</h3>
     </div>
     <div class="right_area">
       <a href="/logout" class="logout_btn">Logout</a>
@@ -176,17 +176,15 @@
     <center>
 
       <img src="{% static customer.profile_pic.url %}" class="profile_image" alt="">
-      <h4>{{request.user.first_name}}</h4>
-      <h6 style="color: rgb(255, 255, 255);">( Customer )</h6>
+      <h4>{{request.user.first_name}} {{request.user.last_name}}</h4>
 
     </center>
 
-    <a href="/customer/customer-dashboard"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a>
-    <a href="/customer/apply-policy"><i class="fab fa-product-hunt"></i><span>Apply Policy</span></a>
-    <a href="/customer/history"><i class="fas fa-history"></i><span>History</span></a>
-
+    <a href="/customer/customer-dashboard"><span>Dashboard</span></a>
+    <a href="/customer/apply-policy"><span>Apply Policy</span></a>
+    <!-- <a href="/customer/history"><i class="fas fa-history"></i><span>History</span></a>
     <a href="/customer/ask-question"><i class="fas fa-question-circle"></i><span>Ask Question</span></a>
-    <a href="/customer/question-history"><i class="fas fa-sync-alt"></i><span>Question History</span></a>
+    <a href="/customer/question-history"><i class="fas fa-sync-alt"></i><span>Question History</span></a> -->
   </div>
   <!--sidebar end-->
 

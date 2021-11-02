@@ -17,23 +17,25 @@
     
   </style>
 </head>
-<h2 style="text-align:center; color:blue;">ADD POLICY</h2>
+<body style="background-color:rgb(0, 0, 0);">
+
+<h2 style="text-align:center; color:rgb(255, 255, 255);">ADD POLICY</h2>
 <form method="POST" autocomplete="off" style="margin:100px;margin-top: 0px;">
     {%csrf_token%}
     <div class="form-group">
-      <label for="course_name">Category</label>
+      <label style="color:rgb(255, 255, 255);" for="course_name">Category</label>
       {% render_field policyForm.category class="form-control" placeholder="Life Insurance" %}
 
-        <label for="course_name">Policy Name</label>
+        <label style="color:rgb(255, 255, 255);" for="course_name">Policy Name</label>
       {% render_field policyForm.policy_name class="form-control" placeholder="Jeevan Surbhi" %}
 
-     <label for="course_name">Sum Assurance</label>
+     <label style="color:rgb(255, 255, 255);" for="course_name">Sum Assurance</label>
       {% render_field policyForm.sum_assurance class="form-control" placeholder="100000" %}
 
-    <label for="course_name">Premium</label>
+    <label style="color:rgb(255, 255, 255);" for="course_name">Premium</label>
       {% render_field policyForm.premium class="form-control" placeholder="5000" %}
 
-          <label for="course_name">Tenure</label>
+          <label style="color:rgb(255, 255, 255);" for="course_name">Tenure</label>
       {% render_field policyForm.tenure class="form-control" placeholder="12" %}
 
 
@@ -43,5 +45,6 @@
 <br>
     <button type="submit" class="btn btn-primary">ADD</button>
   </form>
+</body>
 <br><br><br><br>
 {% endblock content %}
