@@ -2,7 +2,7 @@ from django.shortcuts import render,redirect,reverse
 from . import forms,models
 from django.db.models import Sum
 from django.contrib.auth.models import Group
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, HttpResponse
 from django.contrib.auth.decorators import login_required,user_passes_test
 from django.conf import settings
 from datetime import date, timedelta
@@ -11,13 +11,14 @@ from django.core.mail import send_mail
 from insurance import models as CMODEL
 from insurance import forms as CFORM
 from django.contrib.auth.models import User
-
+from django.contrib import messages
 
 def customerclick_view(request):
     if request.user.is_authenticated:
         return HttpResponseRedirect('afterlogin')
+    else:
+        messages.warning(request, 'invalid credentials')
     return render(request,'customer/customerclick.html')
-
 
 def customer_signup_view(request):
     userForm=forms.CustomerUserForm()

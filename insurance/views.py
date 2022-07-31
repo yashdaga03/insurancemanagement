@@ -11,6 +11,7 @@ from django.core.mail import send_mail
 from django.contrib.auth.models import User
 from customer import models as CMODEL
 from customer import forms as CFORM
+from django.contrib import messages
 
 def home_view(request):
     if request.user.is_authenticated:
@@ -33,6 +34,9 @@ def afterlogin_view(request):
 def adminclick_view(request):
     if request.user.is_authenticated:
         return HttpResponseRedirect('afterlogin')
+    else:
+        print("hi")
+        messages.warning(request, 'invalid credentials')
     return HttpResponseRedirect('adminlogin')
 
 
